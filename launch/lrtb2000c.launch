@@ -1,0 +1,12 @@
+<launch>
+    <arg name="host" default="192.168.1.199"/>
+    <arg name="port" default="8501"/>
+    <arg name="udp" default="true"/>
+    
+    <node pkg="keyence_plc_ethernet_driver" type="lrtb2000c_driver.py" name="lrtb2000c" output='screen'>
+    	<param name="host" value="$(arg host)"/>
+    	<param name="port" value="$(arg port)"/>
+    	<param name="udp" value="$(arg udp)"/>
+    </node>
+
+</launch>
